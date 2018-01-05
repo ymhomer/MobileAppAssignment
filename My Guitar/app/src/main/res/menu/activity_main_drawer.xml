@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home page" />
+        <item
+            android:id="@+id/nav_BasicScale"
+            android:icon="@drawable/ic_basic_scale"
+            android:title="Basic Scale" />
+        <item
+            android:id="@+id/nav_chord"
+            android:icon="@drawable/ic_chord"
+            android:title="Guitar Chord" />
+        <item
+            android:id="@+id/nav_video"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Video" />
+    </group>
+
+    <item android:title="About Us">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_about"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>
