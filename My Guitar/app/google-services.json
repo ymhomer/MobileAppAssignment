@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "37020685822",
+    "project_id": "myguitar-2017"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37020685822:android:00bb00b7708859ba",
+        "android_client_info": {
+          "package_name": "app.myguitar.com.myguitar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37020685822-rjpvvuk0ahqjtpvt99tm39s3fj6jq54b.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "37020685822-oohdiof7mj2hbvkqdq3m1j7u66bjhcre.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.myguitar.com.myguitar",
+            "certificate_hash": "1d95dc797aad6bab182f309c07dfce98ae864275"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7TkDzEVfW9rJfj5OqJVRfAu0H1dLcX1w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

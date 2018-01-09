@@ -9,6 +9,7 @@
     tools:showIn="@layout/activity_user_profile">
 
     <RelativeLayout
+        android:id="@+id/prof_section"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@color/colorPrimary"
@@ -19,23 +20,54 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/tv_userName"
+            android:text="Logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
+            android:id="@+id/img_profile"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@mipmap/ic_launcher"
-            android:id="@+id/img_profile" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <TextView
-            android:id="@+id/txt_userName"
+            android:id="@+id/tv_userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/img_profile"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="12dp"
             android:background="#FFFFFF"
-            android:text="User Name"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:layout_below="@+id/img_profile"
-            android:layout_centerHorizontal="true" />
+            android:text="@string/pref_title_display_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <TextView
+            android:id="@+id/tv_userEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_userName"
+            android:layout_centerHorizontal="true"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
     </RelativeLayout>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btn_login"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.628"></com.google.android.gms.common.SignInButton>
 </android.support.constraint.ConstraintLayout>

@@ -16,7 +16,7 @@
             android:title="Guitar Chord" />
         <item
             android:id="@+id/nav_video"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_video"
             android:title="Video" />
     </group>
 
@@ -24,7 +24,7 @@
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_share"
                 android:title="Share" />
             <item
                 android:id="@+id/nav_about"
