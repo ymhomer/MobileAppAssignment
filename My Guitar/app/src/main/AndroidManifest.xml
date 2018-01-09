@@ -68,15 +68,6 @@
                 android:value="app.myguitar.com.myguitar.MainActivity" />
         </activity>
         <activity
-            android:name=".ProfileActivity"
-            android:label="@string/title_activity_profile"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="app.myguitar.com.myguitar.MainActivity" />
-        </activity>
-        <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:parentActivityName=".MainActivity">

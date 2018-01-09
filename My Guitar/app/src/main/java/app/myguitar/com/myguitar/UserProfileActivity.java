@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -47,12 +48,6 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        Name = (EditText) findViewById(R.id.editName);
-        Pass = (EditText) findViewById(R.id.editPass);
-        updateold = (EditText) findViewById(R.id.editText3);
-        updatenew = (EditText) findViewById(R.id.editText5);
-        delete = (EditText) findViewById(R.id.editText6);
 
         helper = new myDbAdapter(this);
 
@@ -165,7 +160,7 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
         startActivityForResult(intent,REQ_CODE);
     }
     private void signOut(){
-        Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<com.google.android.gms.common.api.Status>() {
+        Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
             @Override
             public void onResult(@NonNull Status status) {
                 updateUI(false);
@@ -181,6 +176,7 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
             String img_url = account.getPhotoUrl().toString();
             uName.setText(name);
             uEmail.setText(email);
+            Glide.with(this).load(img_url).into(Prof_Pic);
             updateUI(true);
         }
         else{
@@ -205,6 +201,7 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==REQ_CODE){
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            handleResult(result);
         }
     }
 

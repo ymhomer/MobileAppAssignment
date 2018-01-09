@@ -13,7 +13,7 @@
     <string name="fragment_bs_g_title">G Major Key</string>
     <string name="title_activity_video">Video</string>
     <string name="title_activity_about">About us</string>
-    <string name="title_activity_user_profile">UserProfile</string>
+    <string name="title_activity_user_profile">User Profile</string>
     <string name="title_activity_profile">My Profile</string>
     <string name="title_activity_login">Sign in</string>
 
